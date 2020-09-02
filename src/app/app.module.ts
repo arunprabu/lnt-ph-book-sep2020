@@ -3,16 +3,31 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { MenuComponent } from './menu/menu.component';
+import { HomeComponent } from './home/home.component';
+import { ConceptsComponent } from './concepts/concepts.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    MenuComponent,
+    HomeComponent,
+    ConceptsComponent,
+    ContactsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
+  // Step 3: AppModule in turn bootstraps AppComponent
   bootstrap: [AppComponent]
 })
 export class AppModule { }
