@@ -4,6 +4,11 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-concepts',
   templateUrl: './concepts.component.html',
   styles: [
+    `
+      .greenText{
+        color: green;
+      }
+    `
   ]
 })
 export class ConceptsComponent implements OnInit {
@@ -14,6 +19,13 @@ export class ConceptsComponent implements OnInit {
 
   // property binding related
   companyName = 'L & T Constructions';
+  isLoggedIn = true;
+
+  // two way binding related
+  courseName = 'Angular';
+
+  // custom event related
+  profileName: any;
 
   constructor() { }
 
@@ -22,5 +34,23 @@ export class ConceptsComponent implements OnInit {
 
   getExp(): number {
     return this.exp;
+  }
+
+  // prop binding related
+  isAuth(): boolean{
+    return !this.isLoggedIn;
+  }
+
+  // event binding related
+  clickHandler(evt): void{
+    console.log(evt);
+    alert('clicked');
+    // todo: change the button label to 'Clicked' and disable it on click
+  }
+
+  // Ste 6 in CEB -- custom event binding handler
+  profileLoadedHandler(evt): void{
+    console.log(evt);
+    this.profileName = evt;
   }
 }
