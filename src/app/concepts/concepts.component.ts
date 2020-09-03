@@ -27,6 +27,9 @@ export class ConceptsComponent implements OnInit {
   // custom event related
   profileName: any;
 
+  // *ngFor related
+  skillsList: string[] = ['html', 'css', 'js'];
+
   constructor() { }
 
   ngOnInit(): void {

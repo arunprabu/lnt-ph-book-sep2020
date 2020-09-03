@@ -13,6 +13,8 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { AboutComponent } from './about/about.component';
 import { CpbComponent } from './concepts/cpb/cpb.component';
 import { CebComponent } from './concepts/ceb/ceb.component';
+import { AddContactComponent } from './contacts/add-contact/add-contact.component';
+import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
 
 // main switching box
 @NgModule({
@@ -26,7 +28,9 @@ import { CebComponent } from './concepts/ceb/ceb.component';
     ContactsComponent,
     AboutComponent,
     CpbComponent,
-    CebComponent
+    CebComponent,
+    AddContactComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
