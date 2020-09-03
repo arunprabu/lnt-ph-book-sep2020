@@ -19,7 +19,7 @@ export class ConceptsComponent implements OnInit {
 
   // property binding related
   companyName = 'L & T Constructions';
-  isLoggedIn = true;
+  isLoggedIn = false;  // also used in *ngIf
 
   // two way binding related
   courseName = 'Angular';
