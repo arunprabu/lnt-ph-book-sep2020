@@ -24,4 +24,16 @@ export class ContactService {
         return res;  // 4. send the resp to the comp.
       }));
   }
+
+
+  getContacts(): any { // 1. get the req from comp
+    console.log('Inside getContacts');
+    // 2. send it to the rest api- REST_API_URL, Method: GET, Use http client
+    return this.http.get(this.REST_API_URL)
+      .pipe( map( (res: any) => { // 3. get the resp from REST API
+        console.log(res);
+        return res;  // 4. send the resp to the comp.
+      }));
+  }
+
 }
