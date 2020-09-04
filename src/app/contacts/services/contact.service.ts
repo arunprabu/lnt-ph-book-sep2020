@@ -33,6 +33,7 @@ export class ContactService {
     return this.http.get(this.REST_API_URL)
       .pipe(map((res: any) => { // 3. get the resp from REST API
         console.log(res);
+        // sort the data, filter, remove, convert to json
         return res;  // 4. send the resp to the comp.
       }));
   }
