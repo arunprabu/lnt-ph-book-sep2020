@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { ConceptsComponent } from './concepts/concepts.component';
-import { ContactsComponent } from './contacts/contacts.component';
+import { ContactsComponent } from './contacts/components/contacts.component';
 import { AboutComponent } from './about/about.component';
-import { AddContactComponent } from './contacts/add-contact/add-contact.component';
-import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
+import { AddContactComponent } from './contacts/components/add-contact/add-contact.component';
+import { ContactDetailsComponent } from './contacts/components/contact-details/contact-details.component';
 
 // configuring routes
 const routes: Routes = [

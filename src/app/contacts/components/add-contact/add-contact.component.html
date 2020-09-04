@@ -48,13 +48,14 @@
           </div>
         </div>
   
-        <div class="alert alert-success">
+        <div class="alert alert-success" *ngIf="isSaved">
           Saved Successfully
         </div>
   
         <div class="form-group row">
           <div class="col-sm-10 offset-sm-2">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <!-- todo: disable the button if any errors in form -->
+            <button type="submit" class="btn btn-primary">Submit</button> 
           </div>
         </div>
       </form>
