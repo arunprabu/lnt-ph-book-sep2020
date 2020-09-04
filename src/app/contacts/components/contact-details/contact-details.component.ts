@@ -26,17 +26,25 @@ export class ContactDetailsComponent implements OnInit {
     console.log('Inside ngOnInit');
     // send ajax calls
     this.contactService.getContactById(contactID)
-      .subscribe( (res: any) => {
+      .subscribe((res: any) => {
         console.log(res);
         this.contactData = res;
       });
   }
 
-  editModalHandler(): void{
+  editModalHandler(): void {
     this.duplicateContactData = JSON.parse(JSON.stringify(this.contactData));
   }
 
-  updateContactHandler(): void{
+  updateContactHandler(): void {
     console.log(this.duplicateContactData);
+
+    this.contactService.updateContact(this.duplicateContactData)
+      .subscribe((res: any) => {
+        console.log(res);
+        if (res) {
+          this.isUpdated = true;
+        }
+      });
   }
 }

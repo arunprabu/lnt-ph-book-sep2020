@@ -51,6 +51,15 @@ export class ContactService {
   }
 
   // update
+  updateContact(updatableContactData): any{
+    console.log(updatableContactData);
+    const CONTACT_DETAILS_URL = `${this.REST_API_URL}/${updatableContactData.id}`;
+    return this.http.put(CONTACT_DETAILS_URL, updatableContactData)
+      .pipe(map((res: any) => {
+        console.log(res);
+        return res;
+      }));
+  }
 
   // delete
 
