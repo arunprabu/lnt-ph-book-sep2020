@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountDataService } from '../shared/services/account-data.service';
 
 @Component({
   selector: 'app-about',
@@ -8,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  accountName: any;
+  duplicateAccountName: any;
+
+  constructor(private accountDataService: AccountDataService) { }
 
   ngOnInit(): void {
+    this.accountDataService.latestAccountName.subscribe( (name: any) => {
+      console.log(name);
+      this.accountName = name;
+      this.duplicateAccountName = name;
+    });
+  }
+
+  updateAccountHandler(): void {
+    console.log(this.duplicateAccountName);
+    // let's work on updating the above in account-data-service
+    this.accountDataService.updateAccountName(this.duplicateAccountName);
   }
 
 }

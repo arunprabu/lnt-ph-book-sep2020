@@ -13,9 +13,8 @@ import { ConceptsComponent } from './concepts/concepts.component';
 import { AboutComponent } from './about/about.component';
 import { CpbComponent } from './concepts/cpb/cpb.component';
 import { CebComponent } from './concepts/ceb/ceb.component';
-import { ContactsComponent } from './contacts/components/contacts.component';
-import { AddContactComponent } from './contacts/components/add-contact/add-contact.component';
-import { ContactDetailsComponent } from './contacts/components/contact-details/contact-details.component';
+
+import { ContactsModule } from './contacts/contacts.module';
 
 // main switching box
 @NgModule({
@@ -26,19 +25,15 @@ import { ContactDetailsComponent } from './contacts/components/contact-details/c
     MenuComponent,
     HomeComponent,
     ConceptsComponent,
-    ContactsComponent,
     AboutComponent,
     CpbComponent,
-    CebComponent,
-    AddContactComponent,
-    ContactDetailsComponent
+    CebComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    ContactsModule
   ],
   providers: [],
   // Step 3: AppModule in turn bootstraps AppComponent
