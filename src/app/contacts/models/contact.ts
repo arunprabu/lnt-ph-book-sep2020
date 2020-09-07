@@ -1,3 +1,5 @@
+import { Injectable } from '@angular/core';
+
 // interface
 export interface IContact {
     id: number;
@@ -6,6 +8,7 @@ export interface IContact {
     phone: string;
 }
 
+@Injectable()
 // class that implements interface
 // Model -- ng g cl contacts/models/contact
 export class Contact implements IContact{

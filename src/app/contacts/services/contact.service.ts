@@ -4,7 +4,7 @@ import { map } from 'rxjs/operators';
 import { Contact } from '../models/contact';
 import { Observable } from 'rxjs';
 
-// Decorators
+// Decorator -- is making the class dependency injectable
 @Injectable({
   providedIn: 'root'
 })
