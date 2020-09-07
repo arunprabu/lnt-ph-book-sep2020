@@ -5,4 +5,22 @@
     <input type="text" [(ngModel)]="duplicateAccountName" class="form-control">
     <button type="button" class="btn btn-primary" 
     (click)="updateAccountHandler()">Update Account Name</button>
+
+    <hr>
+    <h2>Pipes - Demo</h2>
+    <p>{{today}}</p>
+    <p>{{today | date }}</p>
+    <p>{{today | date: 'dd/MMMM/yyyy' }}</p> <!-- parameterized pipe-->
+    <p>{{today | date: 'MMMM dd, yyyy hh:mm:ss a' }}</p> <!-- parameterized pipe-->
+
+    <p>{{randomText}}</p>
+    <p>{{randomText |uppercase }}</p>
+    
+    <h3>Custom Pipes</h3>
+    <pre>ng g p shared/pipes/ellipsis</pre>
+
+    <p>{{randomText}}</p>
+    <p>{{randomText | ellipsis }}</p>
+    <p>{{randomText | ellipsis: '24'}}</p> <!-- parameterized pipe-->
+    <hr>
 </div>

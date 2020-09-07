@@ -12,6 +12,9 @@ export class AboutComponent implements OnInit {
   accountName: any;
   duplicateAccountName: any;
 
+  today: Date = new Date();
+  randomText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.';
+
   constructor(private accountDataService: AccountDataService) { }
 
   ngOnInit(): void {

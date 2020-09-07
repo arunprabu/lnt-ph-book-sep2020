@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountDataService } from '../services/account-data.service';
+import { AccountDataService } from '../../services/account-data.service';
 
 @Component({
   selector: 'app-header',
