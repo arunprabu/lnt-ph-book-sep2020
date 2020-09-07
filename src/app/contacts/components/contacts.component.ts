@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { ContactService } from '../services/contact.service';
 import { Subscription } from 'rxjs';
+import { Contact } from '../models/contact';
 
 @Component({
   selector: 'app-contacts',
@@ -11,7 +12,7 @@ import { Subscription } from 'rxjs';
 })
 export class ContactsComponent implements OnInit, OnDestroy {
 
-  contactList: any[];
+  contactList: Contact[];
   contactSubscription: Subscription;
 
   constructor(private contactService: ContactService) { // 1. connect to the service
@@ -23,7 +24,7 @@ export class ContactsComponent implements OnInit, OnDestroy {
     console.log('Inside ngOnInit');
     // 2. send the request to the service
     this.contactSubscription = this.contactService.getContacts()
-      .subscribe( (res: any) => {  // 3. get the resp from service
+      .subscribe( (res: Contact[]) => {  // 3. get the resp from service
         console.log(res);
         this.contactList = res;
       });

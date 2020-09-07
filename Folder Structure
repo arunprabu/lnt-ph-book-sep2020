@@ -1,0 +1,45 @@
+Main Building Blocks
+----
+    Components 
+    Directives 
+    Services 
+    Interfaces 
+    Models
+    Classes
+    Pipes 
+    Guards 
+    Modules 
+
+Concepts
+-----
+    Routing 
+    Data Binding 
+    RxJS/Observables 
+
+========================
+Project Structure
+---
+src/
+    app/
+        about/
+        concepts/
+            cpb/
+            ceb/
+        contacts/
+            components/
+                add-contact/
+                contact-details/
+            services/
+                
+        auth/
+            login/
+            signup/
+            reset-pw/
+        shared/
+            footer/
+            header/
+            menu/
+        home/
+        
+ng g c contacts/add-contact -is 
+ng g c contacts/contact-details -is 
